@@ -496,9 +496,11 @@ public final class WebSMSReceiver extends BroadcastReceiver {
 	 */
 	static void saveMessage(final ConnectorSpec specs, final Context context,
 			final ConnectorCommand command, final int msgType) {
-		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2) {
+        /* MDS - Attempt to store sent message for Kitkat as it can be enabled via App Ops
+           If not enabled it fails silently anyway
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2) {
 			return; // API19+ does not allow writing to content://sms anymore
-		}
+		}*/
 		if (command.getType() != ConnectorCommand.TYPE_SEND) {
 			return;
 		}

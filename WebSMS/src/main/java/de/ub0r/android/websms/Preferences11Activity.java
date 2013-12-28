@@ -27,6 +27,7 @@ import android.preference.PreferenceActivity;
 import de.ub0r.android.lib.IPreferenceContainer;
 import de.ub0r.android.lib.Utils;
 
+
 /**
  * {@link PreferenceActivity} for API>=11.
  * 
@@ -34,6 +35,19 @@ import de.ub0r.android.lib.Utils;
  */
 public final class Preferences11Activity extends PreferenceActivity implements
 		IPreferenceContainer {
+    /**
+     * {@inheritDoc}
+     */
+    // MDS - Need to override isValidFragment for target API>=19 to confirm
+    // fragment is valid
+    @Override
+    protected boolean isValidFragment (String fragmentName)
+    {
+        if(HeaderPreferenceFragment.class.getName().equals(fragmentName))
+            return true;
+        return false;
+
+    }
 	/**
 	 * {@inheritDoc}
 	 */

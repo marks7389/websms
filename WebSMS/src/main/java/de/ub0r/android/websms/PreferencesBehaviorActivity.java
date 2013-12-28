@@ -47,12 +47,14 @@ public class PreferencesBehaviorActivity extends PreferenceActivity {
 					.findPreference("container");
 			pg.removePreference(this.findPreference("remove_diacritics"));
 		}
-		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2) {
+        // MDS - Leave drop_sent preference in place for Kitkat as storing the message
+        // in the SMS database can be enabled via App Ops
+		/*if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2) {
 			// writing to content://sms is not supported in API19+
 			PreferenceGroup pg = (PreferenceGroup) this
 					.findPreference("container");
 			pg.removePreference(this.findPreference("drop_sent"));
-		}
+		}*/
 	}
 
 	/**
