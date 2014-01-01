@@ -55,7 +55,9 @@ public final class HeaderPreferenceFragment extends PreferenceFragment
 
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2) {
             Preference pref = this.findPreference("drop_sent");
-            pref.setSummary(this.getString(R.string.drop_sent_hint_kitkat));
+            if (pref != null) {
+                pref.setSummary(this.getString(R.string.drop_sent_hint_kitkat));
+            }
         }
 
 	}
