@@ -49,6 +49,7 @@ public class PreferencesBehaviorActivity extends PreferenceActivity {
 					.findPreference("container");
 			pg.removePreference(this.findPreference("remove_diacritics"));
 		}
+
         // MDS - Remove Kitkat check as this was the wrong place anyway
 	}
 

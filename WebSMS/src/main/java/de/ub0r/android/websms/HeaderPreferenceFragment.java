@@ -52,6 +52,7 @@ public final class HeaderPreferenceFragment extends PreferenceFragment
 
         // MDS - Override summary for drop_sent preference on Kitkat or later to
         // indicate that App Ops is needed to set WRITE_SMS permission
+
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN_MR2) {
             Preference pref = this.findPreference("drop_sent");
             pref.setSummary(this.getString(R.string.drop_sent_hint_kitkat));
