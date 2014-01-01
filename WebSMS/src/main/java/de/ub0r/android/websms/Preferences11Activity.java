@@ -46,7 +46,6 @@ public final class Preferences11Activity extends PreferenceActivity implements
         if(HeaderPreferenceFragment.class.getName().equals(fragmentName))
             return true;
         return false;
-
     }
 	/**
 	 * {@inheritDoc}
