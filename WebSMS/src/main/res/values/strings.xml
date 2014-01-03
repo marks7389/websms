@@ -108,7 +108,7 @@
 	<string name="hide_paste_hint">Hide "paste" button on text field.</string>
 	<string name="drop_sent_">Don\'t save sent SMS</string>
 	<string name="drop_sent_hint">Don\'t save sent messages in global database.</string>
-    <string name="drop_sent_hint_kitkat">Save also requires WRITE_SMS Permission via App Ops due to Kitkat changes</string>
+    <string name="drop_sent_hint_kitkat">For messages sent via web only. Saving needs WRITE_SMS Permission via App Ops due to Kitkat changes.</string>
 	<string name="enable_autosend_">Enable autosend</string>
 	<string name="enable_autosend_hint">Enable SMSdroid\'s autosend feature.</string>
 	<string name="use_selected_connector_">Use selected Connector</string>
